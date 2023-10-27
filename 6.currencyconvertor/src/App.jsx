@@ -20,7 +20,6 @@ function App() {
   };
 
   const handelCurrencyConvert = () => {
-    console.log(amount, from, " -> ", to, currencyInfo[to]);
     setConvertedAmount(amount * currencyInfo[to]);
   };
 

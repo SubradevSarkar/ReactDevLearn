@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useId } from "react";
 import PropTypes from "prop-types";
 
@@ -52,7 +51,7 @@ const InputBox = ({
     </div>
   );
 };
-InputBox.prototype = {
+InputBox.propTypes = {
   label: PropTypes.string,
   amount: PropTypes.number,
   onAmountChange: PropTypes.func,
