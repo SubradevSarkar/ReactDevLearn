@@ -5,7 +5,7 @@ function Header() {
       <nav className="py-3 px-20 text-sm border-y">
         <div className="flex justify-between items-center">
           <div>
-            <Link to="">
+            <Link to="/">
               <img src="/img/logo.png" width={80} alt="logo" />
             </Link>
           </div>
