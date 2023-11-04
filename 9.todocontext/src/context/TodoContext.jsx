@@ -17,7 +17,6 @@ export function TodoProvider({ children }) {
   };
 
   const updateTodo = (id, todo) => {
-    console.log(todo);
     setTodos((prev) =>
       prev.map((prevTodo) => (prevTodo.id === id ? todo : prevTodo))
     );
