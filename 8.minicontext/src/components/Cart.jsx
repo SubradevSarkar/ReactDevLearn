@@ -5,7 +5,7 @@ function Cart() {
   const { cart } = useStore();
   return (
     <div>
-      <h1 className=" text-center text-lg font-semibold">
+      <h1 className=" dark:text-white text-center text-lg font-semibold">
         total - {cart.reduce((a, b) => a + b.price, 0)}
       </h1>
       <div className="flex flex-wrap justify-center">

@@ -11,9 +11,9 @@ function Card({ product }) {
   };
   return (
     <div>
-      <div className="flex flex-col justify-center  items-center rounded p-2 m-5 w-40 h-50 shadow-md">
-        <div className=" bg-slate-400 rounded w-20 h-20 mb-2"></div>
-        <div className=" text-center">
+      <div className=" dark:bg-slate-950 flex flex-col justify-center  items-center rounded p-2 m-5 w-40 h-50 shadow-md">
+        <div className=" dark:bg-slate-200 bg-slate-400 rounded w-20 h-20 mb-2"></div>
+        <div className=" text-center dark:text-white">
           <h3 className=" font-semibold">{product.name}</h3>
           <p className=" text-sm">
             {product.price} <span>Rs</span>
