@@ -1,12 +1,7 @@
 /* eslint-disable react/prop-types */
 
 function Logo({ width = "100px" }) {
-  return (
-    <div>
-      <img src="" alt="" width={width} />
-      Logo
-    </div>
-  );
+  return <div>Logo</div>;
 }
 
 export default Logo;
