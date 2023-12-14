@@ -21,7 +21,7 @@ class Service {
       return await this.database.createDocument(
         conf.appwriteDatabaseId,
         conf.appwriteCollectionId,
-        ID.unique,
+        ID.unique(),
         {
           title,
           content,
