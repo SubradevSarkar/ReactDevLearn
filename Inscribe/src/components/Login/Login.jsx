@@ -18,8 +18,8 @@ function Login() {
       setError("");
       const authUser = await authService.logIn(data);
       if (authUser) {
-        const user = await authService.getCurrentUser();
-        if (user) dispatch(authLogin(user));
+        const userData = await authService.getCurrentUser();
+        if (userData) dispatch(authLogin({ userData }));
         navigator("/");
       }
     } catch (error) {
@@ -59,7 +59,7 @@ function Login() {
                 required: true,
                 validate: {
                   matchPattern: (pattern) =>
-                    /^w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(
+                    /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(
                       pattern
                     ) || "Email address must be a valid address",
                 },

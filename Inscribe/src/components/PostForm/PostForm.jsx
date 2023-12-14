@@ -20,7 +20,7 @@ function PostForm({ post }) {
   const submit = async (data) => {
     if (post) {
       const file = data.image[0]
-        ? appwriteService.uploadFile(data.image[0])
+        ? await appwriteService.uploadFile(data.image[0])
         : null;
 
       if (file) {
@@ -36,12 +36,11 @@ function PostForm({ post }) {
         navigate(`/post/${dbPost.$id}`);
       }
     } else {
-      const file = data.image[0]
-        ? appwriteService.uploadFile(data.image[0])
-        : null;
+      const file = await appwriteService.uploadFile(data.image[0]);
 
       if (file) {
-        data.featuredImage = file.$id;
+        const fileId = file.$id;
+        data.featuredImage = fileId;
         const dbPost = await appwriteService.createPost({
           ...data,
           userId: userData.$id,
@@ -90,7 +89,7 @@ function PostForm({ post }) {
           </div>
         )}
         <Select
-          options={["active,inactive"]}
+          options={["active", "inactive"]}
           label="Status"
           className="mb-4"
           {...register("status", { required: true })}

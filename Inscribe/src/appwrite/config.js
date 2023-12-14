@@ -16,7 +16,7 @@ class Service {
   }
 
   //post  service
-  async createPost({ title, content, featureImage, status, userId }) {
+  async createPost({ title, content, featuredImage, status, userId }) {
     try {
       return await this.database.createDocument(
         conf.appwriteDatabaseId,
@@ -25,7 +25,7 @@ class Service {
         {
           title,
           content,
-          featureImage,
+          featuredImage,
           status,
           userId,
         }
@@ -35,7 +35,7 @@ class Service {
     }
   }
 
-  async updatePost(postId, { title, content, featureImage, status }) {
+  async updatePost(postId, { title, content, featuredImage, status }) {
     try {
       return await this.database.updateDocument(
         conf.appwriteDatabaseId,
@@ -44,7 +44,7 @@ class Service {
         {
           title,
           content,
-          featureImage,
+          featuredImage,
           status,
         }
       );
@@ -81,7 +81,7 @@ class Service {
 
   async getPosts(query = [Query.equal("status", "active")]) {
     try {
-      return await this.database.getDocument(
+      return await this.database.listDocuments(
         conf.appwriteDatabaseId,
         conf.appwriteCollectionId,
         query

@@ -23,7 +23,7 @@ class AuthService {
       );
       if (userAccount) {
         // login user
-        this.logIn({ email, password });
+        return this.logIn({ email, password });
       } else {
         return userAccount;
       }
