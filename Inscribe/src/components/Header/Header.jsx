@@ -1,4 +1,4 @@
-import { Container, Logout, Logo, Button } from "../index.js";
+import { Container, Logout, Logo } from "../index.js";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -35,7 +35,7 @@ function Header() {
   ];
 
   return (
-    <header className="py-3 shadow bg-slate-200">
+    <header className="py-3 shadow bg-slate-500">
       <Container>
         <nav className="flex">
           <div className="mr-4">
@@ -47,7 +47,10 @@ function Header() {
             {navItems.map((item) =>
               item.active ? (
                 <li key={item.name}>
-                  <button onClick={() => navigate(item.path)}>
+                  <button
+                    onClick={() => navigate(item.path)}
+                    className="inline-bock px-6 py-2 duration-200 hover:bg-blue-100 rounded-full"
+                  >
                     {item.name}
                   </button>
                 </li>

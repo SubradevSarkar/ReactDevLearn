@@ -7,9 +7,11 @@ export { default as Login } from "./Login/Login.jsx";
 export { default as Signup } from "./Signup/Signup.jsx";
 export { default as PostCard } from "./PostCard/PostCard.jsx";
 export { default as AuthLayout } from "./AuthLayout/AuthLayout.jsx";
+export { default as PostForm } from "./PostForm/PostForm.jsx";
 
 // elements export
 export { default as Button } from "./elements/Button/Button.jsx";
 export { default as Logo } from "./elements/Logo/Logo.jsx";
 export { default as Input } from "./elements/Input/Input.jsx";
 export { default as Select } from "./elements/Select/Select.jsx";
+export { default as RTE } from "./elements/RTE/RTE.jsx";
